@@ -1,0 +1,16 @@
+{
+  "name": "effectcraft",
+  "version": "1.0.0",
+  "description": "Create and edit motion graphics and compositions with EffectCraft (After Effects-style, ArtCraft suite) through MCP, the CLI or the control channel, and set up, connect or troubleshoot its MCP server on Windows and macOS.",
+  "author": {
+    "name": "Vinciux99"
+  },
+  "homepage": "https://github.com/Vinciux99/effectcraft-claude-skill",
+  "license": "MIT",
+  "keywords": [
+    "artcraft",
+    "effectcraft",
+    "mcp",
+    "skill"
+  ]
+}

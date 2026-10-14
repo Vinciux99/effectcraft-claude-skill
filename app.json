@@ -1,0 +1,61 @@
+{
+  "id": "effectcraft",
+  "name": "EffectCraft",
+  "tagline": "After Effects-style motion graphics and compositing (.ecproj)",
+  "upstream": "storytold/effectcraft",
+  "port": 9877,
+  "docsPort": 9877,
+  "launch": {
+    "args": [
+      "--control",
+      "{port}"
+    ]
+  },
+  "mcp": {
+    "server": "effectcraft",
+    "live": [
+      "mcp",
+      "--bridge",
+      "{port}"
+    ],
+    "headless": [
+      "mcp",
+      "--autosave"
+    ],
+    "default": "live"
+  },
+  "windows": {
+    "dirs": [
+      "{ProgramFiles}\\EffectCraft",
+      "{LocalAppData}\\Programs\\EffectCraft"
+    ],
+    "app": "effectcraft.exe",
+    "cli": "effectcraft-cli.exe"
+  },
+  "macos": {
+    "bundles": [
+      "/Applications/EffectCraft.app",
+      "{home}/Applications/EffectCraft.app"
+    ],
+    "appBinary": "Contents/MacOS/EffectCraft",
+    "cliPaths": [
+      "{home}/.artcraft/bin/effectcraft-cli",
+      "/usr/local/bin/effectcraft-cli",
+      "/opt/homebrew/bin/effectcraft-cli",
+      "{bundle}/Contents/MacOS/effectcraft-cli"
+    ],
+    "cliReleaseAsset": "effectcraft-cli-{version}-macos-universal.zip",
+    "cliBinaryInZip": "effectcraft-cli"
+  },
+  "prepare": {
+    "dirs": []
+  },
+  "auth": {
+    "type": "none",
+    "notes": "Loopback only, no token."
+  },
+  "verified": {
+    "windows": true,
+    "macos": false
+  }
+}
